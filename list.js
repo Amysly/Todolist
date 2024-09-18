@@ -28,8 +28,9 @@ addtask.addEventListener('click', function () {
     });
 
     checkButton.addEventListener('click', function () {
-      li.style.textDecoration = 'line-through';
+      taskText.style.textDecoration = 'line-through';
     });
+    
 
     inputtask.value = '';
   } else {
