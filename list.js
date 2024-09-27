@@ -27,8 +27,16 @@ addtask.addEventListener('click', function () {
       e.target.parentElement.remove();
     });
 
-    checkButton.addEventListener('click', function () {
-      taskText.style.textDecoration = 'line-through';
+    checkButton.addEventListener('click', function (e) {
+      if (taskText.style.textDecoration === 'line-through') {
+        taskText.style.textDecoration = 'none';
+        checkButton.textContent = 'check';
+        checkButton.style.backgroundColor = '#32cd32';
+      } else {
+        taskText.style.textDecoration = 'line-through';
+        checkButton.textContent = 'unchecked';
+        checkButton.style.backgroundColor = 'brown';
+      }
     });
     
 
